@@ -3,9 +3,9 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>javaToScala</groupId>
-    <artifactId>JavaToScala</artifactId>
-    <name>JavaToScala</name>
+    <groupId>PathwayToScala</groupId>
+    <artifactId>PathwayToScala</artifactId>
+    <name>PathwayToScala</name>
     <version>1.0</version>
     <packaging>jar</packaging>
 
@@ -38,12 +38,6 @@
             <version>1.1.2</version>
         </dependency>
 
-        <dependency>
-            <groupId>org.scala-lang</groupId>
-            <artifactId>scala-library</artifactId>
-            <version>2.10.2</version>
-        </dependency>
-
     </dependencies>
 
     <pluginRepositories>
@@ -55,6 +49,7 @@
 
     <build>
         <plugins>
+
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -73,20 +68,7 @@
                     <mainClass>javaToScala.JavaToScala</mainClass>
                 </configuration>
             </plugin>
-            <plugin>
-                <groupId>net.alchim31.maven</groupId>
-                <artifactId>scala-maven-plugin</artifactId>
-                <version>3.1.5</version>
-                <executions>
-                    <execution>
-                        <phase>compile</phase>
-                        <goals>
-                            <goal>compile</goal>
-                            <goal>testCompile</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
+            
         </plugins>
     </build>
 </project>
