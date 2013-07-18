@@ -35,7 +35,9 @@ public class PathwayToScala {
                     MessageReplacementService.getInstance().setReplacementMessage(newMessage);
                     System.out.println("replacement message set to " + newMessage);
                 } else if (countMatcher.find()) {
-                    String nextMessage = MessageReplacementService.getInstance().getNextMessage();
+                    //todo make this a random number
+                    Integer personId = 5;
+                    String nextMessage = MessageReplacementService.getInstance().getNextMessage(personId);
                     System.out.println("nextMessage = " + nextMessage);
                 } else if (quitMatcher.find()) {
                     finished = true;
