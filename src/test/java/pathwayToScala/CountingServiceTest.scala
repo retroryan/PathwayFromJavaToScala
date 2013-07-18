@@ -14,8 +14,8 @@ class CountingServiceTest {
   def testCountingService() = {
     //scala infers the type of this variable to be a CountingService, so we don't have to declare the type
     val countingService = CountingService.getInstance()
-    countingService.increment()
-    countingService.increment()
+    countingService.increment(2)
+    countingService.increment(2)
 
     assertSame("The count should be 2", countingService.getCount, 2L)
 

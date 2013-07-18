@@ -32,4 +32,8 @@ public class CountingService {
     public long getCount() {
         return counter.get();
     }
+
+    public List<CountEntry> getCountHistory() {
+        return countHistory;
+    }
 }

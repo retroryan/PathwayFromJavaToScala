@@ -4,6 +4,8 @@ package pathwayToScala;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.Date;
+import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -39,6 +41,11 @@ public class PathwayToScala {
                     Integer personId = 5;
                     String nextMessage = MessageReplacementService.getInstance().getNextMessage(personId);
                     System.out.println("nextMessage = " + nextMessage);
+
+                    Map countEntryMap = CountEntry.getNumberOfIncrements();
+                    // Iterable<Object> keys = numberOfIncrements.keys();
+                     System.out.println("countEntryMap = " + countEntryMap);
+
                 } else if (quitMatcher.find()) {
                     finished = true;
                 } else {
