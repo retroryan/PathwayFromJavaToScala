@@ -1,4 +1,4 @@
-package javaToScala;
+package pathwayToScala;
 
 
 import java.io.BufferedReader;
@@ -8,7 +8,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 
-public class JavaToScala {
+public class PathwayToScala {
 
     final Pattern msgPattern = Pattern
             .compile("(?:m|M)\\s+(.++)");
@@ -16,7 +16,7 @@ public class JavaToScala {
     final Pattern countPattern = Pattern.compile("(?:c|count)");
 
     public static void main(String[] args) throws Exception {
-        new JavaToScala().commandLoop();
+        new PathwayToScala().commandLoop();
     }
 
     protected void commandLoop() throws IOException {
@@ -42,7 +42,7 @@ public class JavaToScala {
                 } else {
                     System.out.println("Unknown command! " + command
                             + ". Try:\n"
-                            + "'m Akka Message' to set a new akka message\n"
+                            + "'m Message' to set a new message\n"
                             + "'c' current count of the Counting Service\n"
                             + "'q' for quit");
                 }

@@ -1,4 +1,4 @@
-package javaToScala;
+package pathwayToScala;
 
 import java.util.concurrent.atomic.AtomicLong;
 

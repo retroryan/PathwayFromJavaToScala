@@ -11,7 +11,7 @@
 
 
     <properties>
-        <java-version>1.6</java-version>
+        <java-version>1.7</java-version>
         <org.slf4j.version>1.5.10</org.slf4j.version>
         <org.log4j.version>1.2.15</org.log4j.version>
     </properties>
@@ -36,6 +36,12 @@
             <groupId>commons-logging</groupId>
             <artifactId>commons-logging</artifactId>
             <version>1.1.2</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.scala-lang</groupId>
+            <artifactId>scala-library</artifactId>
+            <version>2.10.2</version>
         </dependency>
 
     </dependencies>
@@ -68,7 +74,22 @@
                     <mainClass>javaToScala.JavaToScala</mainClass>
                 </configuration>
             </plugin>
-            
+
+            <plugin>
+                <groupId>net.alchim31.maven</groupId>
+                <artifactId>scala-maven-plugin</artifactId>
+                <version>3.1.5</version>
+                <executions>
+                    <execution>
+                        <phase>compile</phase>
+                        <goals>
+                            <goal>compile</goal>
+                            <goal>testCompile</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+
         </plugins>
     </build>
 </project>

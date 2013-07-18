@@ -1,4 +1,4 @@
-package javaToScala;
+package pathwayToScala;
 
 public class MessageReplacementService {
 
