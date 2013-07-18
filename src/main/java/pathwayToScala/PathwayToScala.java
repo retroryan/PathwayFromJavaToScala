@@ -5,6 +5,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Date;
+import java.util.List;
 import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -42,7 +43,7 @@ public class PathwayToScala {
                     String nextMessage = MessageReplacementService.getInstance().getNextMessage(personId);
                     System.out.println("nextMessage = " + nextMessage);
 
-                    Map countEntryMap = CountEntry.getNumberOfIncrements();
+                    Map<Object, List<CountEntry>> countEntryMap = CountEntry.getNumberOfIncrements();
                     // Iterable<Object> keys = numberOfIncrements.keys();
                      System.out.println("countEntryMap = " + countEntryMap);
 
