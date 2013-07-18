@@ -29,6 +29,11 @@ public class CountingService {
         return counter.incrementAndGet();
     }
 
+    public void resetForTestOnly() {
+        counter.set(0);
+        countHistory = new ArrayList<>();
+    }
+
     public long getCount() {
         return counter.get();
     }

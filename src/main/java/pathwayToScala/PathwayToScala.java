@@ -43,7 +43,7 @@ public class PathwayToScala {
                     String nextMessage = MessageReplacementService.getInstance().getNextMessage(personId);
                     System.out.println("nextMessage = " + nextMessage);
 
-                    Map<Object, List<CountEntry>> countEntryMap = CountEntry.getNumberOfIncrements();
+                    Map<Integer, List<CountEntry>> countEntryMap = CountEntry.getNumberOfIncrements();
                     // Iterable<Object> keys = numberOfIncrements.keys();
                      System.out.println("countEntryMap = " + countEntryMap);
 
