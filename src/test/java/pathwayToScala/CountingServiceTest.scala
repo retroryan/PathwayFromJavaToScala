@@ -54,8 +54,8 @@ class CountingServiceTest {
     //if the update worked this new list should have 2 entries.
     val filteredList = countingService.getCountHistory.asScala.filter(countEntry => (countEntry.person.personId == 22))
 
-    //2 from the previous test plus 2 more
-    assertSame("The filtered count history should be of length 2", filteredList.size, 2)
+    //If the filtered list is the same size as the original, than we know it was properly updated.
+    assertSame("The filtered count history should be of length 2", filteredList.size, countingService.getCountHistory.size)
 
   }
 }
