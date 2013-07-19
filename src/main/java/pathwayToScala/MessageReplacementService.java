@@ -21,9 +21,9 @@ public class MessageReplacementService {
         this.replacementMessage = replacementMessage;
     }
 
-    public String getNextMessage(Integer personId) {
+    public String getNextMessage(Person person) {
         long count = CountingService.getInstance().getCount();
-        CountingService.getInstance().increment(personId);
+        CountingService.getInstance().increment(person);
         return getReplacementMessage() + " [" + count + "]";
     }
 }

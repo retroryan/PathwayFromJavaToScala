@@ -22,11 +22,15 @@ public class CountingService {
 
     private final AtomicLong counter = new AtomicLong(0);
 
-    public long increment(Integer personId) {
-        CountEntry countEntry = new CountEntry(personId, new Date());
+    public long increment(Person person) {
+        CountEntry countEntry = new CountEntry(person, new Date());
         countHistory.add(countEntry);
 
         return counter.incrementAndGet();
+    }
+
+    public void updatePersonId(int oldPersonId, int newPersonId) {
+        countHistory = CountEntry.updatePersonId(oldPersonId, newPersonId);
     }
 
     public void resetForTestOnly() {
