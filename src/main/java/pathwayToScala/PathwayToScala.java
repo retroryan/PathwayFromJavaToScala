@@ -54,6 +54,7 @@ public class PathwayToScala {
                     int oldPersonId = Integer.parseInt(updateMatcher.group(1));
                     int newPersonId = Integer.parseInt(updateMatcher.group(2));
                     CountingService.getInstance().updatePersonId(oldPersonId, newPersonId);
+                    printCountHistory();
                 } else if (quitMatcher.find()) {
                     finished = true;
                 } else {
