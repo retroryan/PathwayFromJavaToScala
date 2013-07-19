@@ -62,6 +62,8 @@ public class PathwayToScala {
                             + ". Try:\n"
                             + "'m Message' to set a new message\n"
                             + "'c' current count of the Counting Service\n"
+                            + "'h' current history Counting Service\n"
+                            + "'u Old Person Id New Person ID' update a person id\n"
                             + "'q' for quit");
                 }
             }
